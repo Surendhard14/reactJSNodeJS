@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 
-app.get("https://api-services1.onrender.com/", (req, res) => {
-  console.log("res", res);
+app.get("/", (req, res) => {
+  console.log("res", { hi: "there" });
   res.send({ hi: "there" });
 });
 const PORT = process.env.PORT || 5000;
